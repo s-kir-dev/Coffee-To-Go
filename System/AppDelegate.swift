@@ -1,21 +1,32 @@
 //
 //  AppDelegate.swift
-//  Coffee To Go
+//  Coffee
 //
-//  Created by Кирилл Сысоев on 22.11.2024.
+//  Created by Кирилл Сысоев on 8.09.24.
 //
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        FirebaseApp.configure()
+//        Auth.auth().addStateDidChangeListener { auth, user in
+//            if user == nil {
+//                self.showModalAuth()
+//            }
+//        }
         return true
     }
+    func showModalAuth() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let newVC = storyBoard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
+        self.window?.rootViewController?.present(newVC, animated: true, completion: nil)
+    }
+    
 
     // MARK: UISceneSession Lifecycle
 

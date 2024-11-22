@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E00B97AC2CF0AE5000432CB3 /* Exceptions for "Coffee To Go" folder in "Coffee To Go" target */ = {
+		E00B97DF2CF0B2C200432CB3 /* Exceptions for "Coffee To Go" folder in "Coffee To Go" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -24,9 +24,14 @@
 		E00B979C2CF0AE4F00432CB3 /* Coffee To Go */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				E00B97AC2CF0AE5000432CB3 /* Exceptions for "Coffee To Go" folder in "Coffee To Go" target */,
+				E00B97DF2CF0B2C200432CB3 /* Exceptions for "Coffee To Go" folder in "Coffee To Go" target */,
 			);
 			path = "Coffee To Go";
+			sourceTree = "<group>";
+		};
+		E00B97DD2CF0B29A00432CB3 /* System */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -47,6 +52,7 @@
 			children = (
 				E00B979C2CF0AE4F00432CB3 /* Coffee To Go */,
 				E00B979B2CF0AE4F00432CB3 /* Products */,
+				E00B97DD2CF0B29A00432CB3 /* System */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +81,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				E00B979C2CF0AE4F00432CB3 /* Coffee To Go */,
+				E00B97DD2CF0B29A00432CB3 /* System */,
 			);
 			name = "Coffee To Go";
 			packageProductDependencies = (
@@ -95,6 +102,7 @@
 				TargetAttributes = {
 					E00B97992CF0AE4F00432CB3 = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -143,6 +151,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VS8XY62R74;
@@ -160,9 +169,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "s-kir.Coffee-To-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -171,6 +185,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VS8XY62R74;
@@ -188,9 +203,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "s-kir.Coffee-To-Go";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
