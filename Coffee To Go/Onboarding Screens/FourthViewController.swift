@@ -23,7 +23,7 @@ class FourthViewController: UIViewController {
     }
     
     func makeFlag(state: Bool) {
-        UserDefaults.standard.set(state, forKey: "Flag")
+        UserDefaults.standard.set(state, forKey: "OnboardingsEnded")
         debugPrint("State changed")
     }
 

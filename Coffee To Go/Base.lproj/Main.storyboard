@@ -362,10 +362,6 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.92549019610000005" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="PGG-jx-s13" eventType="touchUpInside" id="17l-OS-oWz"/>
-                                    <segue destination="eDX-K7-ROt" kind="showDetail" id="KdW-AT-IMR"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jvj-oE-ls8">
                                 <rect key="frame" x="16" y="405" width="361" height="34"/>
@@ -407,6 +403,7 @@
                         <outlet property="checkBoxButton" destination="EnW-7q-h0o" id="eqK-qQ-E6H"/>
                         <outlet property="continueButton" destination="W6U-F6-31Q" id="Oiw-5u-U4D"/>
                         <outlet property="phoneField" destination="jvj-oE-ls8" id="v6f-By-oV5"/>
+                        <segue destination="eDX-K7-ROt" kind="show" identifier="registrationCodeScreen" id="PgF-3r-pXn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmf-G3-HZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -877,7 +874,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="rAY-c2-DuG">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabVC" id="KY3-FB-b28" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="MainTabVC" storyboardIdentifier="MainTabVC" id="KY3-FB-b28" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="q7E-ei-eXh"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jd6-eT-0F5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -1166,7 +1163,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="PGG-jx-s13" eventType="touchUpInside" id="MH1-Y8-XLc"/>
-                                    <segue destination="KY3-FB-b28" kind="presentation" modalPresentationStyle="fullScreen" id="GsH-Q3-i4y"/>
+                                    <action selector="signInButtonTapped:" destination="eDX-K7-ROt" eventType="touchUpInside" id="DpB-df-q9Z"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G8M-da-GqI">
@@ -1190,6 +1187,7 @@
                     <connections>
                         <outlet property="codeField" destination="G8M-da-GqI" id="f49-sk-QX9"/>
                         <outlet property="signInButton" destination="2RV-9S-6R9" id="wzO-qx-hbB"/>
+                        <segue destination="KY3-FB-b28" kind="presentation" identifier="tabBarController" modalPresentationStyle="fullScreen" id="4A6-em-Y15"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCi-dp-COC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

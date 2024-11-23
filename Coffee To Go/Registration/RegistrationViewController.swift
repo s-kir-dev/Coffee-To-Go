@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationViewController: UIViewController {
    
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var codeField: UITextField!
+    var userID = String()
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,41 +44,22 @@ class RegistrationViewController: UIViewController {
         }
     }
 
-//    @IBAction func signInButtonTapped(_ sender: UIButton) {
-//        if let code = codeField.text, !code.isEmpty {
-//            // Получаем сохраненный verificationID из UserDefaults
-//            guard let verificationID = UserDefaults.standard.string(forKey: "authVerificationID") else {
-//                showAlert(message: "Ошибка при получении verificationID")
-//                return
-//            }
-//            
-//            let credential = PhoneAuthProvider.provider().credential(
-//                withVerificationID: verificationID,
-//                verificationCode: code
-//            )
-//            
-//            // Верификация кода с помощью Firebase
-//            Auth.auth().signIn(with: credential) { [weak self] authResult, error in
-//                if let error = error {
-//                    print("Ошибка верификации: \(error.localizedDescription)")
-//                    self?.showAlert(message: "Неверный код")
-//                    return
-//                }
-//                
-//                // Успешная верификация, выполняем переход в главное приложение
-//                DispatchQueue.main.async {
-//                    UserDefaults.standard.set(true, forKey: "Flag")  // Устанавливаем флаг входа
-//                    if let tabBarController = self?.storyboard?.instantiateViewController(withIdentifier: "MainTabVC") as? UITabBarController {
-//                        tabBarController.modalPresentationStyle = .fullScreen
-//                        self?.navigationController?.pushViewController(tabBarController, animated: true)
-//                    }
-//                }
-//            }
-//        } else {
-//            showAlert(message: "Введите код")
-//        }
-//    }
-//    
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+        db.collection("users")
+            .document("userID\(userID)")
+            .setData([
+                "ID": userID
+            ]) { error in
+                if let error = error {
+                    print("Error adding order: \(error)")
+                } else {
+                    print("User was added correctly with \(self.userID)")
+                }
+            }
+        UserDefaults.standard.set(true, forKey: "Registered")
+        performSegue(withIdentifier: "tabBarController", sender: self)
+    }
+    
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default)

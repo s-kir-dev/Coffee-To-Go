@@ -17,19 +17,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
-        // Проверка флага "Flag" для отображения экранов
-        if UserDefaults.standard.bool(forKey: "Flag") == false {
+        if UserDefaults.standard.bool(forKey: "OnboardingsEnded") == false {
             let onboardingVC = storyBoard.instantiateViewController(withIdentifier: "root") as! UIPageViewController
             window.rootViewController = onboardingVC
+            print("основной экран - онбординги")
         }
-//         else if Auth.auth().currentUser == nil {
-//            let signInVC = storyBoard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
-//            window.rootViewController = signInVC
-//        }
-            else {
+        else if UserDefaults.standard.bool(forKey: "Registered") == false {
+            let signInVC = storyBoard.instantiateViewController(withIdentifier: "NavigationController") as! UINavigationController
+            window.rootViewController = signInVC
+            print("основной экран - регистрация")
+        }
+        else {
             let mainTabBarVC = storyBoard.instantiateViewController(withIdentifier: "MainTabVC") as! UITabBarController
             mainTabBarVC.modalPresentationStyle = .fullScreen
             window.rootViewController = mainTabBarVC
+            print("основной экран - основной")
         }
         
         self.window = window

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class TelephoneAuthViewController: UIViewController {
 
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var checkBoxButton: UIButton!
+    let db = Firestore.firestore()
     var bool = false
     
     @IBAction func checkBox(_ sender: UIButton) {
@@ -34,6 +36,7 @@ class TelephoneAuthViewController: UIViewController {
         continueButton.addTarget(self, action: #selector(authWithPhone), for: .touchUpInside)
         
         phoneField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
     }
 
     func addToolBarToKeyboard() {
@@ -47,7 +50,9 @@ class TelephoneAuthViewController: UIViewController {
     }
     
     @objc func dismissKeyboard() {
-        view.endEditing(true)
+        checkUserIDAndNavigate()
+        //view.endEditing(true)
+        
     }
 
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -68,24 +73,37 @@ class TelephoneAuthViewController: UIViewController {
             return
         }
         
-//        PhoneAuthProvider.provider().verifyPhoneNumber(phone, uiDelegate: nil) { verificationID, error in
-//            if let error = error {
-//                print("Ошибка при отправке SMS: \(error.localizedDescription)")
-//                self.showAlert(message: "Ошибка при отправке SMS")
-//                return
-//            }
-//            
-//            // Сохраняем verificationID в UserDefaults
-//            if let verificationID = verificationID {
-//                UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
-//                
-//                // Переходим на экран ввода кода
-//                DispatchQueue.main.async {
-//                    let vc = RegistrationViewController()
-//                    self.navigationController?.pushViewController(vc, animated: true)
-//                }
-//            }
-//        }
+        performSegue(withIdentifier: "registrationCodeScreen", sender: self)
+    }
+    
+    func checkUserIDAndNavigate() {
+        guard let userID = phoneField.text, !userID.isEmpty else {
+            view.endEditing(true)
+            return
+        }
+
+        let userDocument = Firestore.firestore().collection("users").document("userID\(userID)")
+        
+        userDocument.getDocument { document, error in
+            if let error = error {
+                print("Ошибка при проверке документа: \(error.localizedDescription)")
+                return
+            }
+            
+            if let document = document, document.exists {
+                DispatchQueue.main.async {
+                    if let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabVC") as? UITabBarController {
+                        UserDefaults.standard.set(true, forKey: "Registered")
+                        tabBarController.modalPresentationStyle = .fullScreen
+                        self.present(tabBarController, animated: true)
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.view.endEditing(true)
+                }
+            }
+        }
     }
 
     func showAlert(message: String) {
@@ -97,6 +115,12 @@ class TelephoneAuthViewController: UIViewController {
     
     func isValidPhone(_ phone: String) -> Bool {
         return phone.hasPrefix("+") && phone.count == 13
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let registrationVC = segue.destination as? RegistrationViewController {
+            registrationVC.userID = self.phoneField.text!
+        }
     }
 }
 
