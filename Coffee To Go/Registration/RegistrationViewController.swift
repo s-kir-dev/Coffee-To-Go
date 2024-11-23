@@ -56,6 +56,8 @@ class RegistrationViewController: UIViewController {
                     print("User was added correctly with \(self.userID)")
                 }
             }
+        
+        UserDefaults.standard.set("userID\(userID)", forKey: "UserID")
         UserDefaults.standard.set(true, forKey: "Registered")
         performSegue(withIdentifier: "tabBarController", sender: self)
     }

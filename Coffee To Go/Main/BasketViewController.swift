@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class BasketViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -8,7 +9,9 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var deleteAllButton: UIButton!
     @IBOutlet weak var orderButton: UIButton!
     
+    let db = Firestore.firestore()
     var basket: [NewDrink] = []
+    let userID = UserDefaults.standard.string(forKey: "UserID")!
     
     var totalPrice: Double = 0 {
         didSet {
@@ -27,6 +30,8 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
         
         basketState()
         
+        orderButton.addTarget(self, action: #selector (orderButtonTapped), for: .touchUpInside)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(updateBasket), name: Notification.Name("ProductAdded"), object: nil)
     }
 
@@ -44,7 +49,47 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
     }
+    
+    @objc func orderButtonTapped() {
+        let clientID = userID // Получаем ID пользователя
+        let ordersCollection = db.collection("orders").document(clientID).collection("clientOrders") // Коллекция заказов пользователя
 
+        for newDrink in basket {
+            let productID = UUID().uuidString // Уникальный ID для каждого продукта
+
+            ordersCollection.document(productID).setData([
+                "category": newDrink.category.rawValue,
+                "name": newDrink.name,
+                "description": newDrink.description,
+                "price": newDrink.price,
+                "image": newDrink.image,
+                "volume/pieces": newDrink.volume,
+                "with arabica": newDrink.isArabicaSelected,
+                "with milk": newDrink.isMilkSelected,
+                "with caramel": newDrink.isCaramelSelected,
+                "with syrup": newDrink.withSyrup,
+                "with sugar": newDrink.withSugar
+            ]) { error in
+                if let error = error {
+                    print("Error adding product to order: \(error)")
+                } else {
+                    print("Product \(newDrink.name) added successfully for client \(clientID)")
+                }
+            }
+        }
+
+        basket.removeAll()
+        saveBasket()
+        totalPrice = 0
+        table.reloadData()
+        basketState()
+
+        let alert = UIAlertController(title: "Заказ оформлен", message: "Ваш заказ успешно сохранен!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
+    }
+    
+    
     @IBAction func clearBasketTapped(_ sender: Any) {
         basket.removeAll()
         totalPrice = 0
