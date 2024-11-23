@@ -6,6 +6,7 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var emptyBasketImage: UIImageView!
     @IBOutlet weak var deleteAllButton: UIButton!
+    @IBOutlet weak var orderButton: UIButton!
     
     var basket: [NewDrink] = []
     
@@ -72,8 +73,10 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
     func basketState() {
         if basket.isEmpty {
             emptyBasketImage.isHidden = false
+            orderButton.isHidden = true
         } else {
             emptyBasketImage.isHidden = true
+            orderButton.isHidden = false
         }
         
         deleteAllButton.isHidden = !emptyBasketImage.isHidden

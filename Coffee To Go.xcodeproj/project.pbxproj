@@ -6,8 +6,59 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E023CA722CF12D0B0033CD1D /* openssl_grpc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E023CA712CF12D0B0033CD1D /* openssl_grpc.framework */; };
+		E023CA762CF12E140033CD1D /* Pods_Coffee_To_Go.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0516C286492B8C84540C6DF5 /* Pods_Coffee_To_Go.framework */; };
+		E023CA772CF12E140033CD1D /* Pods_Coffee_To_Go.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0516C286492B8C84540C6DF5 /* Pods_Coffee_To_Go.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0A00BD32CF1E0020028852F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A00BD22CF1E0020028852F /* WidgetKit.framework */; };
+		E0A00BD52CF1E0020028852F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A00BD42CF1E0020028852F /* SwiftUI.framework */; };
+		E0A00BE62CF1E0040028852F /* OrderWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E0A00BD12CF1E0020028852F /* OrderWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0A00BE42CF1E0040028852F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E00B97922CF0AE4E00432CB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0A00BD02CF1E0020028852F;
+			remoteInfo = OrderWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E04D1DC82CF11F0E001621AD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E023CA772CF12E140033CD1D /* Pods_Coffee_To_Go.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0A00BEB2CF1E0040028852F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E0A00BE62CF1E0040028852F /* OrderWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		026987A6EC8518CF9E874DF4 /* Pods-Coffee To Go.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee To Go.debug.xcconfig"; path = "Target Support Files/Pods-Coffee To Go/Pods-Coffee To Go.debug.xcconfig"; sourceTree = "<group>"; };
+		0516C286492B8C84540C6DF5 /* Pods_Coffee_To_Go.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffee_To_Go.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38211BC84CE020C11E90D243 /* Pods-Coffee To Go.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffee To Go.release.xcconfig"; path = "Target Support Files/Pods-Coffee To Go/Pods-Coffee To Go.release.xcconfig"; sourceTree = "<group>"; };
 		E00B979A2CF0AE4F00432CB3 /* Coffee To Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee To Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E023CA712CF12D0B0033CD1D /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A00BD12CF1E0020028852F /* OrderWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OrderWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A00BD22CF1E0020028852F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E0A00BD42CF1E0020028852F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +68,13 @@
 				Info.plist,
 			);
 			target = E00B97992CF0AE4F00432CB3 /* Coffee To Go */;
+		};
+		E0A00BEA2CF1E0040028852F /* Exceptions for "OrderWidget" folder in "OrderWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E0A00BD02CF1E0020028852F /* OrderWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -34,6 +92,14 @@
 			path = System;
 			sourceTree = "<group>";
 		};
+		E0A00BD62CF1E0020028852F /* OrderWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E0A00BEA2CF1E0040028852F /* Exceptions for "OrderWidget" folder in "OrderWidgetExtension" target */,
+			);
+			path = OrderWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,18 +107,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E023CA722CF12D0B0033CD1D /* openssl_grpc.framework in Frameworks */,
+				E023CA762CF12E140033CD1D /* Pods_Coffee_To_Go.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0A00BCE2CF1E0020028852F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0A00BD52CF1E0020028852F /* SwiftUI.framework in Frameworks */,
+				E0A00BD32CF1E0020028852F /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31F07A0FA1580C16A4E512F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E023CA712CF12D0B0033CD1D /* openssl_grpc.framework */,
+				0516C286492B8C84540C6DF5 /* Pods_Coffee_To_Go.framework */,
+				E0A00BD22CF1E0020028852F /* WidgetKit.framework */,
+				E0A00BD42CF1E0020028852F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33F5E20B7034E7EC8B5337E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				026987A6EC8518CF9E874DF4 /* Pods-Coffee To Go.debug.xcconfig */,
+				38211BC84CE020C11E90D243 /* Pods-Coffee To Go.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E00B97912CF0AE4E00432CB3 = {
 			isa = PBXGroup;
 			children = (
 				E00B979C2CF0AE4F00432CB3 /* Coffee To Go */,
+				E0A00BD62CF1E0020028852F /* OrderWidget */,
 				E00B979B2CF0AE4F00432CB3 /* Products */,
 				E00B97DD2CF0B29A00432CB3 /* System */,
+				33F5E20B7034E7EC8B5337E3 /* Pods */,
+				31F07A0FA1580C16A4E512F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				E00B979A2CF0AE4F00432CB3 /* Coffee To Go.app */,
+				E0A00BD12CF1E0020028852F /* OrderWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,24 +172,49 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E00B97AD2CF0AE5000432CB3 /* Build configuration list for PBXNativeTarget "Coffee To Go" */;
 			buildPhases = (
+				64A78353288A8836D4FB028C /* [CP] Check Pods Manifest.lock */,
 				E00B97962CF0AE4F00432CB3 /* Sources */,
 				E00B97972CF0AE4F00432CB3 /* Frameworks */,
 				E00B97982CF0AE4F00432CB3 /* Resources */,
+				E04D1DC82CF11F0E001621AD /* Embed Frameworks */,
+				6A48A7DCDB9DF292830A0B80 /* [CP] Embed Pods Frameworks */,
+				E0A00BEB2CF1E0040028852F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E0A00BE52CF1E0040028852F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E00B979C2CF0AE4F00432CB3 /* Coffee To Go */,
 				E00B97DD2CF0B29A00432CB3 /* System */,
 			);
 			name = "Coffee To Go";
-			packageProductDependencies = (
-			);
 			productName = "Coffee To Go";
 			productReference = E00B979A2CF0AE4F00432CB3 /* Coffee To Go.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E0A00BD02CF1E0020028852F /* OrderWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0A00BE72CF1E0040028852F /* Build configuration list for PBXNativeTarget "OrderWidgetExtension" */;
+			buildPhases = (
+				E0A00BCD2CF1E0020028852F /* Sources */,
+				E0A00BCE2CF1E0020028852F /* Frameworks */,
+				E0A00BCF2CF1E0020028852F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E0A00BD62CF1E0020028852F /* OrderWidget */,
+			);
+			name = OrderWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = OrderWidgetExtension;
+			productReference = E0A00BD12CF1E0020028852F /* OrderWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -103,6 +229,9 @@
 					E00B97992CF0AE4F00432CB3 = {
 						CreatedOnToolsVersion = 16.1;
 						LastSwiftMigration = 1610;
+					};
+					E0A00BD02CF1E0020028852F = {
+						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
@@ -121,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				E00B97992CF0AE4F00432CB3 /* Coffee To Go */,
+				E0A00BD02CF1E0020028852F /* OrderWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -133,7 +263,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0A00BCF2CF1E0020028852F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64A78353288A8836D4FB028C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffee To Go-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A48A7DCDB9DF292830A0B80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee To Go/Pods-Coffee To Go-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffee To Go/Pods-Coffee To Go-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffee To Go/Pods-Coffee To Go-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E00B97962CF0AE4F00432CB3 /* Sources */ = {
@@ -143,11 +322,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E0A00BCD2CF1E0020028852F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0A00BE52CF1E0040028852F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0A00BD02CF1E0020028852F /* OrderWidgetExtension */;
+			targetProxy = E0A00BE42CF1E0040028852F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E00B97AE2CF0AE5000432CB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 026987A6EC8518CF9E874DF4 /* Pods-Coffee To Go.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -182,6 +377,7 @@
 		};
 		E00B97AF2CF0AE5000432CB3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38211BC84CE020C11E90D243 /* Pods-Coffee To Go.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -250,7 +446,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -313,7 +509,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -329,6 +525,62 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0A00BE82CF1E0040028852F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VS8XY62R74;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrderWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OrderWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "s-kir.Coffee-To-Go.OrderWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E0A00BE92CF1E0040028852F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VS8XY62R74;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OrderWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OrderWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "s-kir.Coffee-To-Go.OrderWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -349,6 +601,15 @@
 			buildConfigurations = (
 				E00B97AE2CF0AE5000432CB3 /* Debug */,
 				E00B97AF2CF0AE5000432CB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0A00BE72CF1E0040028852F /* Build configuration list for PBXNativeTarget "OrderWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0A00BE82CF1E0040028852F /* Debug */,
+				E0A00BE92CF1E0040028852F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

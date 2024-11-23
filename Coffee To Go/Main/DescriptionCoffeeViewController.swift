@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DescriptionCoffeeViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class DescriptionCoffeeViewController: UIViewController {
     var withSyrup : Bool = false
     var withSugar : Bool = false
     var selectedAdditions: [String] = []
-    
+    let db = Firestore.firestore()
 
     @IBOutlet weak var titleBar: UINavigationItem!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -185,6 +186,33 @@ class DescriptionCoffeeViewController: UIViewController {
             // Отправляем уведомление о добавлении нового продукта
             NotificationCenter.default.post(name: Notification.Name("ProductAdded"), object: nil)
 
+            let clientID = "someClientID"
+            let orderID = UUID().uuidString
+
+            db.collection("orders")
+                .document(clientID) // Документ для клиента
+                .collection("clientOrders") // Вложенная коллекция заказов
+                .document(newDrink.category.rawValue) 
+                .setData([
+                    "category": newDrink.category.rawValue,
+                    "name": newDrink.name,
+                    "description": newDrink.description,
+                    "price": newDrink.price,
+                    "image": newDrink.image,
+                    "volume/pieces": newDrink.volume,
+                    "with arabica": newDrink.isArabicaSelected,
+                    "with milk": newDrink.isMilkSelected,
+                    "with caramel": newDrink.isCaramelSelected,
+                    "with syrup": newDrink.withSyrup,
+                    "with sugar": newDrink.withSugar
+                ]) { error in
+                    if let error = error {
+                        print("Error adding order: \(error)")
+                    } else {
+                        print("Order added successfully for client \(clientID)")
+                    }
+                }
+            
             // Показываем сообщение об успешном добавлении
             let message = "Товар успешно добавлен в корзину!"
             let alert = UIAlertController(title: "Успешно", message: message, preferredStyle: .alert)

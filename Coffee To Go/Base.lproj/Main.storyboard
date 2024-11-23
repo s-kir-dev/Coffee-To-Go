@@ -13,7 +13,7 @@
         <!--First View Controller-->
         <scene sceneID="frM-LK-b7Y">
             <objects>
-                <viewController storyboardIdentifier="first" id="PGG-jx-s13" customClass="FirstViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="first" id="PGG-jx-s13" customClass="FirstViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJ3-ll-E3x">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
         <!--Root Page View Controller-->
         <scene sceneID="W6R-MF-yJt">
             <objects>
-                <pageViewController storyboardIdentifier="root" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="LlM-R0-xiF" customClass="RootPageViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="root" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="LlM-R0-xiF" customClass="RootPageViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="PGG-jx-s13" kind="presentation" modalPresentationStyle="fullScreen" id="nrk-J8-5fZ"/>
                     </connections>
@@ -98,7 +98,7 @@
         <!--Second View Controller-->
         <scene sceneID="XzK-JW-2FU">
             <objects>
-                <viewController storyboardIdentifier="second" id="2cP-lQ-4yq" customClass="SecondViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" id="2cP-lQ-4yq" customClass="SecondViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HfD-ZN-Pvj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +165,7 @@
         <!--Third View Controller-->
         <scene sceneID="Lea-oX-0Z2">
             <objects>
-                <viewController storyboardIdentifier="third" id="89h-K5-LEm" customClass="ThirdViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="third" id="89h-K5-LEm" customClass="ThirdViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XC5-3E-qgY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,7 +232,7 @@
         <!--Fourth View Controller-->
         <scene sceneID="oZm-Gd-17P">
             <objects>
-                <viewController storyboardIdentifier="fourth" id="qHv-5V-etr" customClass="FourthViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fourth" id="qHv-5V-etr" customClass="FourthViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z00-Xi-HNx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +348,7 @@
         <!--Sign In-->
         <scene sceneID="UEN-nM-v3d">
             <objects>
-                <viewController modalPresentationStyle="pageSheet" id="vxe-QY-Rtq" customClass="TelephoneAuthViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="pageSheet" id="vxe-QY-Rtq" customClass="TelephoneAuthViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dn9-u6-EFR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,7 +416,7 @@
         <!--Home-->
         <scene sceneID="Dk8-wn-KLt">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="0Jt-Gi-AdX" customClass="MainViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="0Jt-Gi-AdX" customClass="MainViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Od-wz-vDw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -434,7 +434,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="WD9-xT-VMg" customClass="DrinkCollectionViewCell" customModule="Coffee" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="WD9-xT-VMg" customClass="DrinkCollectionViewCell" customModule="Coffee_To_Go" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="196"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eZq-cZ-WGE">
@@ -473,7 +473,7 @@
                                                                 <constraint firstAttribute="width" constant="147" id="lyD-N6-GgU"/>
                                                                 <constraint firstAttribute="height" constant="42.666666666666657" id="naz-Qj-Xes"/>
                                                             </constraints>
-                                                            <buttonConfiguration key="configuration" style="filled" title="Select" cornerStyle="large">
+                                                            <buttonConfiguration key="configuration" style="filled" image="hand.point.up.left.fill" catalog="system" title=" Select" cornerStyle="large">
                                                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="24"/>
                                                                 <color key="baseForegroundColor" red="0.88235294819999999" green="0.50196081400000003" blue="0.29803922770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="baseBackgroundColor" white="0.75" alpha="0.40438741719999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -673,17 +673,25 @@
         <!--Basket-->
         <scene sceneID="oxz-Kk-phd">
             <objects>
-                <viewController id="l8Z-0G-IYg" customClass="BasketViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l8Z-0G-IYg" customClass="BasketViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fou-bt-Zx1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHh-qG-bbh">
+                                <rect key="frame" x="16" y="711" width="361" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="basket" catalog="system" title=" Order" cornerStyle="large">
+                                    <color key="baseBackgroundColor" red="0.92549019610000005" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pSS-3j-A86">
-                                <rect key="frame" x="16" y="76" width="361" height="661"/>
+                                <rect key="frame" x="16" y="76" width="361" height="627"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="141" id="I1f-IX-lH3" customClass="OrderViewCell" customModule="Coffee" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="141" id="I1f-IX-lH3" customClass="OrderViewCell" customModule="Coffee_To_Go" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I1f-IX-lH3" id="6em-lT-A30">
@@ -758,7 +766,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRC-h3-bGg">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZRC-h3-bGg">
                                 <rect key="frame" x="278" y="49" width="99" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -775,13 +783,96 @@
                     <connections>
                         <outlet property="deleteAllButton" destination="Wwm-eq-F0g" id="JBH-Lj-CDf"/>
                         <outlet property="emptyBasketImage" destination="XLt-ce-Xe3" id="muD-qn-D6W"/>
+                        <outlet property="orderButton" destination="dHh-qG-bbh" id="GUG-19-OMA"/>
                         <outlet property="table" destination="pSS-3j-A86" id="oVr-oy-Xex"/>
                         <outlet property="totalPriceLabel" destination="ZRC-h3-bGg" id="QQB-Z5-NEx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gh7-gy-VEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5909.160305343511" y="764.78873239436621"/>
+            <point key="canvasLocation" x="5578" y="765"/>
+        </scene>
+        <!--Orders-->
+        <scene sceneID="LbI-pr-3Ds">
+            <objects>
+                <viewController id="sok-Tb-rTY" customClass="OrdersViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jNn-j9-ctx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yXh-rj-v9H">
+                                <rect key="frame" x="0.0" y="51" width="393" height="652"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="141" id="4hi-6c-seE" customClass="OrderViewCell" customModule="Coffee_To_Go" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4hi-6c-seE" id="9pt-gu-W0p">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cappuccino" translatesAutoresizingMaskIntoConstraints="NO" id="fLJ-az-ZwG">
+                                                    <rect key="frame" x="20" y="22" width="109" height="108"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="180₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgg-eX-zLG">
+                                                    <rect key="frame" x="262" y="30" width="99" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="200 ml" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVi-ui-x1S">
+                                                    <rect key="frame" x="137" y="67" width="138" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ Syrup, milk, sugar, caramel, arabica" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hF-yZ-0x1">
+                                                    <rect key="frame" x="137" y="91" width="224" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.92549020049999997" green="0.38823530080000002" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cappuccino" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umd-g9-Kya">
+                                                    <rect key="frame" x="137" y="19" width="138" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="productAdds" destination="0hF-yZ-0x1" id="3Fi-YD-2nw"/>
+                                            <outlet property="productImage" destination="fLJ-az-ZwG" id="dA2-Zl-ls5"/>
+                                            <outlet property="productName" destination="umd-g9-Kya" id="th2-8u-tz1"/>
+                                            <outlet property="productPrice" destination="Pgg-eX-zLG" id="35b-N2-bSQ"/>
+                                            <outlet property="productVolume" destination="eVi-ui-x1S" id="VoJ-Zh-8dA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eH6-GE-U7E">
+                                <rect key="frame" x="16" y="711" width="361" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="qrcode" catalog="system" title=" QR-code" cornerStyle="large">
+                                    <color key="baseBackgroundColor" red="0.92549019610000005" green="0.38823529410000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wid-bE-mez"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Orders" image="book.fill" catalog="system" id="PWQ-Tb-vsm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="736-7G-RYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6254" y="765"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rAY-c2-DuG">
@@ -796,6 +887,7 @@
                     <connections>
                         <segue destination="0Jt-Gi-AdX" kind="relationship" relationship="viewControllers" id="zBj-oj-Z1N"/>
                         <segue destination="l8Z-0G-IYg" kind="relationship" relationship="viewControllers" id="qYD-Ft-FGz"/>
+                        <segue destination="sok-Tb-rTY" kind="relationship" relationship="viewControllers" id="Ilc-ko-Aud"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhY-LE-ema" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -805,7 +897,7 @@
         <!--Description Coffee View Controller-->
         <scene sceneID="tWA-kT-RI6">
             <objects>
-                <viewController id="Ueo-Km-iK3" customClass="DescriptionCoffeeViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ueo-Km-iK3" customClass="DescriptionCoffeeViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Izr-em-UpB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1058,7 +1150,7 @@
         <!--Sign In-->
         <scene sceneID="A6S-m6-cRc">
             <objects>
-                <viewController modalPresentationStyle="pageSheet" id="eDX-K7-ROt" customClass="RegistrationViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="pageSheet" id="eDX-K7-ROt" customClass="RegistrationViewController" customModule="Coffee_To_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xsk-bw-tmd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1116,10 +1208,14 @@
         <image name="Milk1" width="100" height="100"/>
         <image name="Plus1" width="100" height="100"/>
         <image name="Unselected" width="25" height="25"/>
+        <image name="basket" catalog="system" width="128" height="108"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="cup.and.heat.waves.fill" catalog="system" width="128" height="118"/>
         <image name="firstOnboarding" width="343" height="290"/>
         <image name="fourthOnboarding" width="375" height="292"/>
+        <image name="hand.point.up.left.fill" catalog="system" width="120" height="128"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="secondOnboarding" width="360" height="296"/>
         <image name="thirdOnboarding" width="367" height="283"/>
         <image name="trash.fill" catalog="system" width="117" height="128"/>
@@ -1127,10 +1223,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
