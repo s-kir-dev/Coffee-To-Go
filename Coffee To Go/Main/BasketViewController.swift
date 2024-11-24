@@ -8,6 +8,7 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var emptyBasketImage: UIImageView!
     @IBOutlet weak var deleteAllButton: UIButton!
     @IBOutlet weak var orderButton: UIButton!
+    @IBOutlet weak var viewOrdersButton: UIButton!
     
     let db = Firestore.firestore()
     var basket: [NewDrink] = []
@@ -31,6 +32,8 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
         basketState()
         
         orderButton.addTarget(self, action: #selector (orderButtonTapped), for: .touchUpInside)
+        
+        viewOrdersButton.addTarget(self, action: #selector(viewOrdersButtonTapped), for: .touchUpInside)
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateBasket), name: Notification.Name("ProductAdded"), object: nil)
     }
@@ -89,6 +92,9 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
         present(alert, animated: true)
     }
     
+    @IBAction func backToBasket(segue: UIStoryboardSegue) {
+        
+    }
     
     @IBAction func clearBasketTapped(_ sender: Any) {
         basket.removeAll()
@@ -103,6 +109,10 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
         table.reloadData()
         
         basketState()
+    }
+    
+    @objc func viewOrdersButtonTapped() {
+        performSegue(withIdentifier: "orders", sender: self)
     }
 
     @objc func updateBasket() {
