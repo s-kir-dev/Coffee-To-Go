@@ -14,6 +14,7 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
     var orders: [NewDrink] = []
     
     @IBOutlet weak var ordersTableView: UITableView!
+    @IBOutlet weak var qrCodeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,11 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
         ordersTableView.delegate = self
         
         loadOrders()
+        
+        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(loadOrders), userInfo: nil, repeats: true)
     }
     
-    private func loadOrders() {
+    @objc private func loadOrders() {
         let db = Firestore.firestore()
         let clientID = userID
         let ordersCollection = db.collection("orders").document(clientID).collection("clientOrders")
@@ -38,6 +41,7 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
             guard let documents = querySnapshot?.documents else { return }
             self.orders = documents.compactMap { document -> NewDrink? in
                 let data = document.data()
+                
                 var additions: [String] = []
                 
                 if data["with arabica"] as? Bool == true {
@@ -80,11 +84,8 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    @objc func updateButtonTapped() {
-        loadOrders()
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        qrCodeButton.isEnabled = !orders.isEmpty
         return orders.count
     }
 

@@ -71,7 +71,8 @@ class BasketViewController: UIViewController, UITableViewDataSource, UITableView
                 "with milk": newDrink.isMilkSelected,
                 "with caramel": newDrink.isCaramelSelected,
                 "with syrup": newDrink.withSyrup,
-                "with sugar": newDrink.withSugar
+                "with sugar": newDrink.withSugar,
+                "userID": userID
             ]) { error in
                 if let error = error {
                     print("Error adding product to order: \(error)")
