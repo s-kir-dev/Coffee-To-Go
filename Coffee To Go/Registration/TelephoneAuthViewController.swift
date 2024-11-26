@@ -51,8 +51,6 @@ class TelephoneAuthViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         checkUserIDAndNavigate()
-        //view.endEditing(true)
-        
     }
 
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -92,6 +90,9 @@ class TelephoneAuthViewController: UIViewController {
             
             if let document = document, document.exists {
                 DispatchQueue.main.async {
+                    
+                    UserDefaults.standard.set("userID\(userID)", forKey: "UserID")
+                    
                     if let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabVC") as? UITabBarController {
                         UserDefaults.standard.set(true, forKey: "Registered")
                         tabBarController.modalPresentationStyle = .fullScreen
